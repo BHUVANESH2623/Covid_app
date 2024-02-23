@@ -24,7 +24,7 @@ export const Register = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/log/register",
+        "https://covid-app-backend.onrender.com/log/register",
         { username, email, role, password },
         {
           withCredentials: true,

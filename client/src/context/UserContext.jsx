@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import axios from 'axios'
+import axios from "axios";
 
 const UserContext = createContext({});
 
@@ -8,14 +8,16 @@ const UserContextProvider = ({ children }) => {
   const [id, setId] = useState(null);
   // const [toggle,setToggle]=useState(false);
 
-  useEffect(()=>{
-    axios.get('http://localhost:8080/log/profile',{
-      withCredentials:true,
-    }).then(res=>{
-      setLoggedUser(res.data.username);
-      setId(res.data.id);
-    })
-  },[]);
+  useEffect(() => {
+    axios
+      .get("https://covid-app-backend.onrender.com/log/profile", {
+        withCredentials: true,
+      })
+      .then((res) => {
+        setLoggedUser(res.data.username);
+        setId(res.data.id);
+      });
+  }, []);
   // console.log(loggeduser);
 
   return (
