@@ -15,7 +15,7 @@ app.use(
   cors({
     origin: [
       "https://covid-app-frontend.onrender.com",
-      "https://covid-qada6jz1u-bhuvanesh-gs-projects.vercel.app/",
+      "https://covid-qada6jz1u-bhuvanesh-gs-projects.vercel.app",
     ],
   })
 );
