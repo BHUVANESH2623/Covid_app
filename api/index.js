@@ -13,7 +13,10 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://covid-app-frontend.onrender.com",
+    origin: [
+      "https://covid-app-frontend.onrender.com",
+      "https://covid-qada6jz1u-bhuvanesh-gs-projects.vercel.app/",
+    ],
   })
 );
 
