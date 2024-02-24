@@ -15,7 +15,7 @@ app.use(
   cors({
     origin: [
       "https://covid-app-frontend.onrender.com",
-      "https://covid-app-one-alpha.vercel.app/",
+      "https://covid-app-one-alpha.vercel.app",
     ],
   })
 );
