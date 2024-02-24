@@ -11,11 +11,13 @@ app.use((req, res, next) => {
   next();
 });
 app.use(express.json());
-app.use(
-  cors({
-    origin: "https://covid-app-frontend.onrender.com",
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://covid-app-frontend.onrender.com",
+//   })
+// );
+
+app.use(cors());
 app.use(cookieParser());
 
 app.use("/log", userRoutes);
